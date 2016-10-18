@@ -3253,7 +3253,8 @@ extended attribute’s [=takes a named argument list|named argument list=].
 </div>
 
 Two types are <dfn id="dfn-distinguishable" export>distinguishable</dfn> if
-at most one of the two [=includes a nullable type=]
+at most one of the two is a [=dictionary type=] or [=record type=]
+or [=includes a nullable type=],
 and at least one of the following three conditions is true:
 
 1.  The two types (taking their [=inner types=]
@@ -3498,8 +3499,15 @@ and at least one of the following three conditions is true:
 1.  Both types are either a union type or nullable union type, and each member type of the one
     is distinguishable with each member type of the other.
 
-Note: [=Promise types=] do not appear in the above table, and as a consequence
-are not distinguishable with any other type.
+<div class="example" id="example-distinguishability">
+    <code>{{double}}?</code> and <code>{{record}}&lt;DOMString, DOMString></code> are
+    not [=distinguishable=] because it's not the case that "at most one of the
+    two is a [=dictionary type=] or [=record type=] or [=includes a nullable
+    type=]".
+
+    [=Promise types=] do not appear in the above table, and as a consequence are
+    not distinguishable with any other type.
+</div>
 
 If there is more than one entry in an [=effective overload set=]
 that has a given type list length, then for those entries there
