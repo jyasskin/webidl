@@ -11772,6 +11772,26 @@ the {{WindowProxy}} object ensures that \[[SetPrototypeOf]] is never called on a
 directly. For other global objects, however, this is necessary.
 
 
+<h3 id="es-new-object">Creating objects</h3>
+<div algorithm="new object">
+    A <dfn export>new</dfn> |type| associated with a |realm| or |global| is the
+    result of the following algorithm:
+
+    1. If |global| is set:
+        1. Assert: |realm| is not set.
+        1. Set |realm| to |global|'s [=associated Realm=].
+    1. If |realm| is not set:
+        1. 
+    1. <div class="assertion">
+        Assert: |type| is one of:
+        * An [=interface=], or
+        * A constructor defined by [[ECMA-262]].
+
+        </div>
+    1. 
+</div>
+
+
 <h3 id="es-legacy-platform-objects" oldids="indexed-and-named-properties">Legacy platform objects</h3>
 
 [=Legacy platform objects=] will appear to have additional properties that correspond to their
