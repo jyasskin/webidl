@@ -4102,8 +4102,8 @@ always considered to be present.
 </p>
 
 An [=ordered map=] with string [=map/keys=] can be implicitly treated as a dictionary value of a
-specific dictionary |D| if all of its [=map/entries=] correspond to [=dictionary members=], in the
-correct order and with the correct types, and with appropriate [=map/entries=] for any required
+specific dictionary |D| if all of its [=map/entries=] correspond to [=dictionary members=]
+with the correct types, and with appropriate [=map/entries=] for any required
 dictionary members.
 
 <p class="advisement">
